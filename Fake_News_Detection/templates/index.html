@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    {% load static %}
+    <link rel="stylesheet" type= "text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="registerWrapper">
+            <div class="loginCont">
+                <div class="headCont">
+                    <h1 class="regHead"><a href="index.html">Fake News Detection</a></h1>
+                    <p class="regSubHead">Fake News Detection automatically review thousands of news related articles to determine whether the news is fake or relevant.</p>
+                </div>
+                <div class="formCont">
+                    
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <input class="inputTopMargin" type="text" name="news" placeholder="Copy paste document here" required></br>
+                        <button class="signupBtn" type="submit">Submit</button>
+                    </form><br/>
+                    <p class="registerHref"><a href="#">{{result}}</a></p>
+                    <p class="registerHref"><a href="#">Accuracy Score: 87.42%</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h1>Fake News Detection!</h1>
+    <p clas="description">Fake News Detection automatically review thousands of news related articles to determine whether the news is fake or relevant.</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="news" placeholder="Copy paste document here" required></br>
+        <input class="button" type="submit">
+    </form>
+    <h2> {{result}} </h1>
+    <p class="accuracy">Accuracy Score: 87.42%</p> -->
+</body>
+</html>

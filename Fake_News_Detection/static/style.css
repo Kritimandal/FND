@@ -1,0 +1,181 @@
+html, body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body{
+    background-color: lightblue;
+;
+
+}
+
+.mainContainer{
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 20px;
+}
+
+.registerCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    text-align: center;
+    width: 360px;
+    height: 590px;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+.loginCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    text-align: center;
+    width: 360px;
+    height: 485px;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+
+
+.forgotCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    text-align: center;
+    width: 360px;
+    height: 380px;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+.registerContp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    text-align: center;
+    width: 560px;
+    height: 690px;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+.forgotContp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    height: 680px;
+    border-radius: 15px;
+    padding: 10px 10px;
+}
+
+.regHead{
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 50px;
+
+}
+
+.regHead a{
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 50px;
+
+}
+
+
+.regSubHead{
+    font-size: 1.0rem;
+    margin-top: 7px;
+    color: black;
+}
+
+.formCont{
+    margin-top: 40px;
+}
+.formCont input{
+    outline: none;
+    border: none;
+    background-color: rgb(140, 140, 140);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 7px;
+
+ width: 150px;
+}
+
+.formContp input::placeholder, .formCont input::placeholder {
+    color:white;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+
+.inputTopMargin{
+    margin-top: 10px;
+}
+
+form button{
+   display: block;
+    margin: 40px auto 0 auto;
+}
+
+.signupBtn{
+    outline: none;
+    border: none;
+    padding: 15px 35px;
+    color: white;
+    background-color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.registerHref{
+    padding-top: 10px;
+}
+
+.successMessage{
+    position: absolute;
+    top: 47%;
+    font-weight: 600;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.redBtn{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .registerCont{
+        width: 100%;
+        margin: 400px auto 0 auto;
+        position: relative;
+    }
+
+    .registerWrapper{
+        margin: 0 20px;
+    }
+}
+
