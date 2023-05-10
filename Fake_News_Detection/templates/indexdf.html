@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    {% load static %}
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'fontawesomepro/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type= "text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+  <body>
+    <header class="header">
+        <div class="topbar">
+            <li id="login"><a href="loginn.html"> Login</a></li>
+            <li id="Signup"><a href="#"> Register</a></li>
+
+            <!-- Navigation Button -->
+           </div>
+               <nav class="navigation">
+                    <li class="logo"><img src="images/logo.png" alt="logo"></li>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="places.html">Places</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="Booking.html">Booking</a></li>
+                    <li><a href="#trip">Trip Advisor</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <div class="search">     
+                         <i class="fa fa-search" style="font-size:22px;color:blue;"></i><input type="text" placeholder="Search..">
+                    </div>
+               </nav>    
+            </div>
+    </header>
+        <!-- Slideshow container -->
+    <section class="home" id="home">    
+      <div class="front-slider" >   
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="{% static 'images/slider2.jpg' %}" alt="slider1"><div class="Content">
+                <h2 class="heading">Plan My <span>Trip</span></h2>
+                    <p>We'll customize your trip according to your preference.</p>
+                    <a href="userpreference.html" class="btnb">Start Planning</a>
+                </div></div>
+              <div class="swiper-slide"><img src="{% static 'images/slider1.jpg' %}" alt="slider1"><div class="Content">
+                <h2>Plan My Trip</h2>
+                    <p>We'll customize your trip according to your preference.</p>
+                    <a href="userpreference.html" class="btnb">Start Planning</a>
+                </div> </div>
+              <div class="swiper-slide"><img src="{% static 'images/budha.jpg' %}" alt="slider1"><div class="Content">
+                <h2>Plan My Trip</h2>
+                    <p>We'll customize your trip according to your preference.</p>
+                    <a href="userpreference.html" class="btnb">Start Planning</a>
+                </div> </div>
+                ...
+              </div>
+              <div class="swiper-pagination"></div>
+            
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+      </div> 
+    </section>
+    <div class="wrapper">
+        <h1 class="heading">Our <span><a id="trip">Trip Advisor</a></span></h1>
+        <div class="advisor team">
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/2pGPLrl.png" alt="Trip Advisor">
+            </div>
+            <h3>#1 Paul Doe</h3>
+            <p class="role">Adventure Trip Planner</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p><a href="userpreference.html" class="btn">Choose Him</a>
+          </div>
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/jQj1I8E.png" alt="Trip Advisor">
+            </div>
+            <h3>#2 Rosie Meg</h3>
+            <p class="role">Cultural Trip Planner</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p><a href="userpreference.html" class="btn">Choose Her</a></div>
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/2Necikc.png" alt="Trip Advisor">
+            </div>
+            <h3>#3 Alex Wood</h3>
+            <p class="role">Business Trip Planner</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p><a href="userpreference.html" class="btn">Choose Him</a>
+          </div>
+        </div>
+      </div>
+    <section class="popular" id="popular">
+
+        <h1 class="heading"><a id="places"></a>Things <span>To DO</span> </a></h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/k.jpg' %}" alt="">
+                <h3>Treking</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/j.jpg' %}" alt="">
+                <h3>Visit Historical Places</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/c.jpg' %}" alt="">
+                <h3>Mountain Climbing</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/i.jpg' %}" alt="">
+                <h3>Sight Seeing</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star unchecked" ></i>
+                    <i class="fa fa-star unchecked"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/e.jpg' %}" alt="">
+                <h3>Temples</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="far fa-star unchecked"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="{% static 'images/l.jpg' %}" alt="">
+                <h3>Adventures</h3>
+                <div class="stars">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star unchecked"></i>
+                    <i class="fa fa-star unchecked"></i>
+                </div>
+                <a href="#" class="btn">More Details</a>
+            </div>
+    
+        </div>
+    
+    </section>
+    <div class="wrapper">
+        <h1 class="heading">Customer <span>Testimonials</span></h1>
+        <div class="advisor team">
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/2pGPLrl.png" alt="Trip Advisor">
+            </div>
+            <h3>Param Black</h3>
+            <div class="stars">
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star unchecked"></i>
+                <i class="fa fa-star unchecked"></i>
+            </div>
+            <p class="role">Trip to Mt.Everest</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
+          </div>
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/jQj1I8E.png" alt="Trip Advisor">
+            </div>
+            <h3>Antino Moody</h3>
+            <div class="stars">
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star unchecked"></i>
+            </div>
+            <p class="role">Trip to Pokhara</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p></div>
+          <div class="team_member">
+            <div class="team_img">
+              <img src="https://i.imgur.com/2Necikc.png" alt="Trip Advisor">
+            </div>
+            <h3>Alison Maggi</h3>
+            <div class="stars">
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star unchecked"></i>
+                <i class="fa fa-star unchecked"></i>
+            </div>
+            <p class="role">Trip to Mustang</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
+          </div>
+        </div>
+      </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4 class="headingf">Contact Us</h4>
+                    <ul class="footericon">
+                        <li>
+                            <a href="#"><i class="fa-brands fa-square-facebook" style="color:blue;"></i>   Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram" style="color:rgb(255, 42, 0);"></i>   Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-twitter" style="color:rgb(0, 72, 96);""></i>   Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="headingf">weCode</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">ABC</a></li>
+                        <li><a href="#">ABC</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col"  id="partnersection">
+                    <h4 class="headingf">Our Partners</h4>
+                    <ul>
+                        <li>
+                            <img src="{% static 'images/CFC.jpg' %}" alt=""> <a href="https://codeforchangenepal.com/" target="_blank">Code For Change</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'images/ntb.jpg' %}" alt=""><a href="https://ntb.gov.np/" target="blank">Nepal Tourism Board(NTB)</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'images/ktm.jpg' %}" alt=""><a href="https://kathmandu.gov.np/" target="blank">Kathmandu Metropolitan City</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'images/pathau.jpg' %}" alt=""><a href="https://pathao.com/np/" target="blank">Pathao</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'images/yeti.jpg' %}" alt=""><a href="https://www.yetiairlines.com/" target="blank">Yeti Airline</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="headingf">Get Helps</h4>
+                    <ul>
+                        <li><a href="#">Find Advisor</a></li>
+                        <li><a href="#">Find Hotel</a></li>
+                        <li><a href="#">Emergency Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottomfooter">
+            <div id="copyright">
+                <address title="copyright">All right reserve: aTripto</adddress>
+            </div>
+            <div class="developer">
+                <i>Developers | <span><a href="#">weCoders</a></span></i>
+            </div>
+        </div>
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="images/script.js"></script>
+    <!-- <div class="mainContainer">
+        <div class="registerWrapper">
+            <div class="loginCont">
+                <div class="headCont">
+                    <h1 class="regHead"><a href="index.html">Fake News Detection</a></h1>
+                    <p class="regSubHead">Fake News Detection automatically review thousands of news related articles to determine whether the news is fake or relevant.</p>
+                </div>
+                <div class="formCont">
+                    
+                    
+                        {% csrf_token %}
+                        <input class="inputTopMargin" type="text" name="news" placeholder="Copy paste document here" required></br>
+                        <button class="signupBtn" type="submit">Submit</button>
+                    </form><br/>
+                    <p class="registerHref"><a href="#">{{result}}</a></p>
+                    <p class="registerHref"><a href="#">Accuracy Score: 87.42%</a></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div>
+        <center>
+      <div class="desktop-1screen">
+        <div class="overlap-group4">
+          <div class="group-1">
+            <div class="overlap-group3">
+              <div class="fake-news-detector"><strong>Fake News Detector</strong></div>
+            </div>
+            <p class="fake-news-detector-a">
+            Fake News Detection automatically detect whether the news is fake or relevant.</p>
+                <form action="" method="POST">
+                    {% csrf_token %}
+            <div class="group-3">
+              <div class="overlap-group-container">
+                <div class="overlap-group2">
+                    <form action="" method="POST"></form>
+                  <input class="enter-the-news-here" type="text" name="news" placeholder="Copy paste document here..." required></br></div>
+                <div class="overlap-group1">
+                  <button class="predict" type="submit">Predict</button>
+                </div>
+              </div>
+            </form><br/>
+              <h1 class="fake">'{{result}}'</h1>
+            </div>
+          </div>
+          <div class="accuracy">Accuracy:87.42%</div>
+        </center>
+        </div>
+      </div>
+
+    <!-- <h1>Fake News Detection!</h1>
+    <p clas="description">Fake News Detection automatically review thousands of news related articles to determine whether the news is fake or relevant.</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="news" placeholder="Copy paste document here" required></br>
+        <input class="button" type="submit">
+    </form>
+    <h2> {{result}} </h1>
+    <p class="accuracy">Accuracy Score: 87.42%</p> -->
+    
+
+    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'lightslider/js/lightslider.min.js' %}"></script>
+</body>
+</html>
