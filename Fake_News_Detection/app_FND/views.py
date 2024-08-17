@@ -16,9 +16,13 @@ def FND(request):
             ans= 'Fake'
         elif ans==1:
             ans='Real'
+            return render(request, 'index.html', {'result' : ans})
         return render(request, 'index.html', {'result' : ans})
-        return render(request, 'index.html', {'score' : ans})
     return render(request, 'index.html')
+
+# def Home(request):
+
+#     return render(request, 'index.html')
 
 # def Data(request):
 #     news= request.GET('news')
