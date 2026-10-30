@@ -85,3 +85,9 @@ local_settings.py
 
 .venv
 db.sqlite3
+venv/
+.ipynb_checkpoints/
+staticfiles/
+.env
+kaggle.json
+*.csv
