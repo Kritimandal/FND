@@ -145,7 +145,7 @@
                 {% csrf_token %}
                 <div class="col-12">
                     <!-- Textarea for news input -->
-                    <textarea class="form-control input-field" name="news" rows="5" placeholder="Copy paste document here..." required></textarea>
+                    <textarea class="form-control input-field" name="news" rows="5" placeholder="Copy paste document here..." required>{{ news }}</textarea>
                     
                    
                 </div>
@@ -155,7 +155,8 @@
             
             <!-- Result -->
             <div class="result">
-                <h1 class="fake text-danger">{{ result }}</h1>
+                {% if error %}<p class="text-warning">{{ error }}</p>{% endif %}
+                {% if result %}<h1 class="{% if result == 'Fake' %}fake text-danger{% else %}text-success{% endif %}">{{ result }}</h1>{% endif %}
             </div>
             
             <!-- Accuracy Information -->

@@ -1,36 +1,33 @@
+from django.http import JsonResponse
 from django.shortcuts import render
-import joblib
-from sklearn.feature_extraction.text import TfidfVectorizer
+from django.views.decorators.http import require_http_methods, require_POST
 
-# Create your views here.
-clf= joblib.load('.//FND//model.sav')
-tfidf_vectorizer = joblib.load('.//FND//vectorizer.sav')
-# pac = joblib.load('.//FND//model.sav')
+from .predictor import predict
 
+MIN_LENGTH = 20
+
+
+def clean_news(raw):
+    news = (raw or '').strip()
+    if len(news) < MIN_LENGTH:
+        return None, f'Please enter at least {MIN_LENGTH} characters of news text.'
+    return news, None
+
+
+@require_http_methods(['GET', 'POST'])
 def FND(request):
-    if request.method == 'POST':
-        news=request.POST['news']
-        vec_news_text = tfidf_vectorizer.transform([news])
-        ans=clf.predict(vec_news_text)
-        if ans==0:
-            ans= 'Fake'
-        elif ans==1:
-            ans='Real'
-            return render(request, 'index.html', {'result' : ans})
-        return render(request, 'index.html', {'result' : ans})
-    return render(request, 'index.html')
+    if request.method == 'GET':
+        return render(request, 'index.html')
 
-# def Home(request):
+    news, error = clean_news(request.POST.get('news'))
+    if error:
+        return render(request, 'index.html', {'error': error}, status=400)
+    return render(request, 'index.html', {'result': predict(news), 'news': news})
 
-#     return render(request, 'index.html')
 
-# def Data(request):
-#     news= request.GET('news')
-#     nb.predict([news])
-#     if pred_nbs==0:
-#          pred_nbs='fake'
-#          print(pred_nbs)
-#     elif pred_nbs==1:
-#              pred_nbs='real'
-#              print(pred_nbs)
-#     return render(request, 'data.html', {'data' : pred_nbs})
+@require_POST
+def predict_api(request):
+    news, error = clean_news(request.POST.get('news'))
+    if error:
+        return JsonResponse({'error': error}, status=400)
+    return JsonResponse({'result': predict(news)})
